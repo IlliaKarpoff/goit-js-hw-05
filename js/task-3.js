@@ -10,8 +10,8 @@
 // removeItem(item) - получет товар и, если он есть, удаляет его из текущих
 
 class Storage {
-    constructor(Array) {
-        this.items = [];
+    constructor(items) {
+        this.items = items;
     }
     getItems() {
         return this.items;
@@ -20,7 +20,7 @@ class Storage {
         this.items.push(item);
     }
     removeItem(item) {
-        for (i = 0, i < this.items.length, i += 1) {
+        for (let i = 0; i < this.items.length; i += 1) {
             if (this.items[i] === item) {
                 this.items.splice(i, 1);
             }
@@ -40,5 +40,5 @@ console.table(items); // [ "Нанитоиды", "Пролонгер", "Желе
 storage.addItem('Дроид');
 console.table(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
 
-storage.removeItem('Дроид');
+storage.removeItem('Пролонгер');
 console.table(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]

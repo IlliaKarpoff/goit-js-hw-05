@@ -8,17 +8,16 @@ class Car {
     //    * в консоль значения свойств maxSpeed, speed, isOn, distance и price.
     //    */
     static getSpecs(car) {
-      // this.maxSpeed = maxSpeed,
-      // this.speed = , isOn, distance, price
-      return console.log(car {maxSpeed, speed, isOn, distance, price});
+      console.log(car);
     }
-    constructor() {
-    this.speed = 0,
-    this.price = price,
-    this.maxSpeed = maxSpeed,
-    this.isOn = false,
-    this.distance = 0
-  }
+    
+    constructor({speed = 0, price, maxSpeed, isOn = false, distance = 0}) {
+      this.speed = speed,
+      this.price = price,
+      this.maxSpeed = maxSpeed,
+      this.isOn = isOn,
+      this.distance = distance
+    }
     
 //   /*
 //    * Конструктор получает объект настроек.
@@ -35,11 +34,11 @@ class Car {
 //    * Добавь геттер и сеттер для свойства price,
 //    * который будет работать с свойством цены автомобиля.
 //    */
-  get price() {
-    return this._price;
+  get _price() {
+    return this.price;
   }
-  set price(value) {
-    this._price = value;    
+  set _price(newPrice) {
+    this.price = newPrice;    
   }
 
 //   /*
